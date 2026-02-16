@@ -89,6 +89,9 @@ export default function Home() {
             <CarCard />
             <CarCard />
             <CarCard />
+            <CarCard />
+            <CarCard />
+            <CarCard />
         </div>
       </div>
     </>
