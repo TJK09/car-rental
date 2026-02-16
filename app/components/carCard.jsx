@@ -8,7 +8,7 @@ import airConditioner from "@/public/air-condition.png"
 const carCard = () => {
   return (
     <>
-    <div className="flex flex-col w-[400px] bg-[#FAFAFA] h-[500px] rounded-lg ml-[30px]">
+    <div className="flex flex-col w-[400px] bg-[#FAFAFA] h-[500px] rounded-lg ml-[30px] hover:shadow-lg">
         <div className="flex mt-[50px]">
             <Image src={carImg} alt="carImg" className="object-contain" />
         </div>
@@ -28,7 +28,7 @@ const carCard = () => {
             <Image src={airConditioner} alt="airConditioner" className="object-contain" /><p>Air Conditioner</p>
         </div>
         <div className="flex justify-center items-center mt-[5px]">
-            <button className="text-[16px] bg-[#5937E0] text-white rounded-lg w-[85%] mt-[20px] h-[50px] ">View Details</button>
+            <button className="text-[16px] bg-[#5937E0] text-white rounded-lg w-[85%] mt-[20px] h-[50px] hover:bg-[#5937E0]/60 ">View Details</button>
         </div>
     </div>
     </>

@@ -100,7 +100,7 @@ const Hero = () => {
             <label className="mt-[20px] text-[15px] font-bold">Return Date</label>
             <input type="date" name="date" id="" className="w-[300px] border-1 rounded border-gray-300 h-[50px] p-[10px] hover:border-black" placeholder="Rental Date" />
 
-            <button className="bg-[#FF9E0C] rounded-[12px] w-[300px] mt-[20px] text-white h-[30px] hover:bg-[#ff9e0c]/80">Book Now</button>
+            <button className="bg-[#FF9E0C] rounded-[12px] w-[300px] mt-[20px] text-white h-[30px] hover:bg-[#ff9e0c]/80 h-[40px]">Book Now</button>
 
 
       </div>
