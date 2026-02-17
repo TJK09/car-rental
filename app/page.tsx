@@ -7,6 +7,12 @@ import infoblockImg from "@/public/InfoblockImg.png"
 import CarCard from "./components/carCard";
 import { ChevronRight } from "@mui/icons-material";
 import CarBgImg from "@/public/bg-carImg.png"
+import carBg from "@/public/car-bg.png"
+import heartBg from "@/public/heart.png"
+import calenderBg from "@/public/calender-bg.png"
+import milesBg from "@/public/Miles-bg.png"
+
+
 
 export default function Home() {
   return (
@@ -101,9 +107,36 @@ export default function Home() {
         <div className="absolute flex items-center justify-center">
           <Image src={CarBgImg} alt="Car in Background" className="object-contain opacity-50" />
         </div>
-        <div className="flex z-10">
-
+        <div className="flex flex-col z-10">
+        <div className="flex justify-center items-center">
+          <h1 className="text-[50px] font-bold text-white">Facts in Numbers</h1>
         </div>
+        <div className="flex items-center justify-between">
+          <p className="text-[16px] font-semibold text-white w-[600px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae quos tempore quod, aliquam vel qui sunt corrupti sed? Ducimus alias ut nisi blanditiis. Dolorem non, at vitae delectus dolores tempora.</p>
+        </div>
+        <div className="flex gap-20 ml-[120px] items-center ">
+          <div className="flex items-center cars bg-white w-[240px] h-[100px] rounded-lg gap-3">
+            <Image src={carBg} alt="Car BG"  className="object-contain ml-[10px]"/>
+            <div className="flex flex-col"><h1 className="text-[24px] font-semibold">540+</h1>
+            <p className="text-[16px] text-[#000000]/50 font-semibold">Cars</p></div>
+          </div>
+          <div className="flex items-center cars bg-white w-[240px] h-[100px] rounded-lg gap-3">
+            <Image src={heartBg} alt="Heart BG" className="object-contain ml-[10px]" />
+            <div className="flex flex-col"><h1 className="text-[24px] font-semibold">20k+</h1>
+            <p className="text-[16px] text-[#000000]/50  font-semibold">Customer</p></div>
+          </div>
+          <div className="flex items-center cars bg-white w-[240px] h-[100px] rounded-lg gap-3">
+            <Image src={calenderBg} alt="Calender BG" className="object-contain ml-[10px]" />
+            <div className="flex flex-col"><h1 className="text-[24px] font-semibold">25+</h1>
+            <p className="text-[16px] text-[#000000]/50 font-semibold">Years</p></div>
+          </div>
+          <div className="flex items-center cars bg-white w-[240px] h-[100px] rounded-lg gap-3">
+            <Image src={milesBg} alt="Miles BG" className="object-contain ml-[10px]" />
+            <div className="flex flex-col"><h1 className="text-[24px] font-semibold">20m+</h1>
+            <p className="text-[16px] text-[#000000]/50 font-semibold">Miles</p></div>
+          </div>
+        </div>
+      </div>
       </div>
     </>
   );
