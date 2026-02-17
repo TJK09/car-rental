@@ -97,9 +97,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex relative bg-[#5937E0]  h-[486px] m-10 ">
+      <div className="flex relative bg-[#5937E0]  h-[486px] m-10 rounded-lg ">
         <div className="absolute flex items-center justify-center">
-          <Image src={CarBgImg} alt="Car in Background" className="object-contain" />
+          <Image src={CarBgImg} alt="Car in Background" className="object-contain opacity-50" />
         </div>
         <div className="flex z-10">
 
