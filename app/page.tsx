@@ -15,6 +15,28 @@ import milesBg from "@/public/Miles-bg.png"
 
 
 export default function Home() {
+
+
+      function StatCard({
+          icon,
+          value,
+          label,
+        }: {
+          icon: any;
+          value: string;
+          label: string;
+        }) {
+          return (
+            <div className="flex w-full max-w-[240px] items-center gap-4 rounded-xl bg-white p-4 shadow-md transition-transform duration-300 hover:scale-105">
+              <Image src={icon} alt={label} className="h-12 w-12 object-contain" />
+              <div className="text-left">
+                <h2 className="text-xl font-bold text-black">{value}</h2>
+                <p className="text-sm font-semibold text-black/60">{label}</p>
+              </div>
+            </div>
+          );
+        }
+  
   return (
     <>
       <Hero />
@@ -103,41 +125,42 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex relative bg-[#5937E0]  h-[486px] m-10 rounded-lg ">
-        <div className="absolute flex items-center justify-center">
-          <Image src={CarBgImg} alt="Car in Background" className="object-contain opacity-50" />
-        </div>
-        <div className="flex flex-col z-10">
-        <div className="flex justify-center items-center">
-          <h1 className="text-[50px] font-bold text-white">Facts in Numbers</h1>
-        </div>
-        <div className="flex items-center justify-between">
-          <p className="text-[16px] font-semibold text-white w-[600px]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae quos tempore quod, aliquam vel qui sunt corrupti sed? Ducimus alias ut nisi blanditiis. Dolorem non, at vitae delectus dolores tempora.</p>
-        </div>
-        <div className="flex gap-20 ml-[120px] items-center ">
-          <div className="flex items-center cars bg-white w-[240px] h-[100px] rounded-lg gap-3">
-            <Image src={carBg} alt="Car BG"  className="object-contain ml-[10px]"/>
-            <div className="flex flex-col"><h1 className="text-[24px] font-semibold">540+</h1>
-            <p className="text-[16px] text-[#000000]/50 font-semibold">Cars</p></div>
-          </div>
-          <div className="flex items-center cars bg-white w-[240px] h-[100px] rounded-lg gap-3">
-            <Image src={heartBg} alt="Heart BG" className="object-contain ml-[10px]" />
-            <div className="flex flex-col"><h1 className="text-[24px] font-semibold">20k+</h1>
-            <p className="text-[16px] text-[#000000]/50  font-semibold">Customer</p></div>
-          </div>
-          <div className="flex items-center cars bg-white w-[240px] h-[100px] rounded-lg gap-3">
-            <Image src={calenderBg} alt="Calender BG" className="object-contain ml-[10px]" />
-            <div className="flex flex-col"><h1 className="text-[24px] font-semibold">25+</h1>
-            <p className="text-[16px] text-[#000000]/50 font-semibold">Years</p></div>
-          </div>
-          <div className="flex items-center cars bg-white w-[240px] h-[100px] rounded-lg gap-3">
-            <Image src={milesBg} alt="Miles BG" className="object-contain ml-[10px]" />
-            <div className="flex flex-col"><h1 className="text-[24px] font-semibold">20m+</h1>
-            <p className="text-[16px] text-[#000000]/50 font-semibold">Miles</p></div>
-          </div>
+      <section className="relative bg-[#5937E0] h-[486px] mx-4 md:mx-10 rounded-2xl overflow-hidden mt-[50px]">
+
+      {/* Background Image */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <Image
+          src={CarBgImg}
+          alt="Car in Background"
+          className="w-full h-full object-contain opacity-40"
+          priority
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 md:px-16 text-center gap-6">
+
+        <h1 className="text-3xl md:text-5xl font-bold text-white">
+          Facts in Numbers
+        </h1>
+
+        <p className="max-w-2xl text-sm md:text-base font-semibold text-white/90">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quos
+          tempore quod, aliquam vel qui sunt corrupti sed? Ducimus alias ut nisi
+          blanditiis. Dolorem non, at vitae delectus dolores tempora.
+        </p>
+
+        {/* Stats */}
+        <div className="mt-10 flex w-full flex-wrap justify-center gap-6 md:gap-10">
+
+          <StatCard icon={carBg} value="540+" label="Cars" />
+          <StatCard icon={heartBg} value="20k+" label="Customers" />
+          <StatCard icon={calenderBg} value="25+" label="Years" />
+          <StatCard icon={milesBg} value="20m+" label="Miles" />
+
         </div>
       </div>
-      </div>
+    </section>
     </>
   );
 }
