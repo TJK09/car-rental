@@ -14,7 +14,7 @@ import milesBg from "@/public/Miles-bg.png"
 import appBtn from "@/public/appStoreBtn.png"
 import googlePlayBtn from "@/public/googlePlayBtn.png"
 import Iphone from "@/public/iPhone 14 Pro - Silver - Portrait.png"
-
+import Mercedes from "@/public/CarBanner.png"
 
 export default function Home() {
 
@@ -118,7 +118,7 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-3 grid-rows-2 gap-10">
-            <CarCard />
+            <CarCard  />
             <CarCard />
             <CarCard />
             <CarCard />
@@ -178,6 +178,17 @@ export default function Home() {
         </div>
         <div className="relative z-10 -translate-x-10 overflow-hidden bg-white rounded-[60px] shadow-lg">
           <Image src={Iphone} alt="Iphone 14" className="object-cover drop-shadow-2xl" />
+        </div>
+      </div>
+    </section>
+    <section className="flex w-[1440px] h-[535px] justify-center items-center mx-auto mt-[100px]">
+      <div className="flex w-[1296px] h-[415px] bg-[#5937E0] rounded-2xl mx-auto mt-[100px] items-center justify-center">
+        <div className="flex flex-col">
+          <h1 className="text-[50px] font-bold text-white w-[756px]">Enjoy every mile with adorable companionship.</h1>
+          <p className="text-[16px] text-white w-[550px] ">Amet cras hac orci lacus. Faucibus ipsum arcu lectus nibh sapien bibendum ullamcorper in. Diam tincidunt tincidunt erat</p>
+        </div>
+        <div className="flex w-[380px] h-[380px] items-center justify-center">
+          <Image src={Mercedes} alt="Car" className="object-contain w-full h-full" />
         </div>
       </div>
     </section>
