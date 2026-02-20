@@ -11,7 +11,9 @@ import carBg from "@/public/car-bg.png"
 import heartBg from "@/public/heart.png"
 import calenderBg from "@/public/calender-bg.png"
 import milesBg from "@/public/Miles-bg.png"
-
+import appBtn from "@/public/appStoreBtn.png"
+import googlePlayBtn from "@/public/googlePlayBtn.png"
+import Iphone from "@/public/iPhone 14 Pro - Silver - Portrait.png"
 
 
 export default function Home() {
@@ -158,6 +160,24 @@ export default function Home() {
           <StatCard icon={calenderBg} value="25+" label="Years" />
           <StatCard icon={milesBg} value="20m+" label="Miles" />
 
+        </div>
+      </div>
+    </section>
+
+    <section className="grid grid-cols-2 mt-[20px] gap-10">
+      <div className="flex flex-col gap-10 mx-20 w-[540px] h-[370px] mt-[100px]">
+        <h1 className="text-[50px] font-bold mt-[20px]">Download Mobile App</h1>
+        <p className="text-[16px] font-semibold text-[#000000]/60">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nemo sunt magni commodi eaque aliquid odio facere expedita maxime optio, aut excepturi. Dolorem nam reprehenderit iusto dignissimos voluptatem ad a!</p>
+        <div className="flex gap-5"><button><Image src={appBtn} alt="App Store Button" /></button>
+        <button><Image src={googlePlayBtn} alt="Google Play Button" /></button></div>
+      </div>
+      
+      <div className="relative flex items-center justify-center py-20">
+        <div className="relative z-0 translate-x-0 -translate-y-6 scale-95 opacity-90">
+          <Image src={Iphone} alt="Iphone 14" className="object-contain"/>
+        </div>
+        <div className="relative z-10 -translate-x-10 overflow-hidden bg-white rounded-[60px] shadow-lg">
+          <Image src={Iphone} alt="Iphone 14" className="object-cover drop-shadow-2xl" />
         </div>
       </div>
     </section>
